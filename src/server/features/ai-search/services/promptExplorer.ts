@@ -15,14 +15,59 @@ import {
 } from "@/types/schemas/ai-search";
 
 /**
- * Prompt Explorer asks one prompt across one-to-four LLM models and renders
- * the answers side by side. Each (prompt, model) tuple is cached in R2 for 7
- * days because LLM responses are expensive and reasonably stable over short
- * windows.
- *
- * Per-model errors are isolated: a Claude API failure must not prevent
- * ChatGPT/Gemini/Perplexity results from rendering. We use Promise.allSettled
- * to enforce that.
+ * @file_id FILE-MVX-AUTO-PROMPTEXPLORER-001
+ * @artifact_kind implementation
+ * @project_id PRJ-HERMES-UNCHAINED
+ * @workspace_id WKS-MVX-ROOT
+ * @app_id APP-BACKEND
+ * @module_id MOD-IDE-WEB
+ * @component_id COMP-PROMPTEXPLORER
+ * @bounded_context governance
+ * @epic_id EPI-MVX-00
+ * @capability_id CAP-UNSPECIFIED
+ * @story_id STORY-UNSPECIFIED
+ * @task_id TASK-UNSPECIFIED
+ * @sprint_id SPR-00
+ * @release_slice_id RS-UNSPECIFIED-00
+ * @requirement_refs REQ-MVX-000
+ * @acceptance_refs AC-UNSPECIFIED-000
+ * @test_refs TEST-UNSPECIFIED-000
+ * @contract_refs CNTR-UNSPECIFIED
+ * @evidence_refs EVD-UNSPECIFIED-000
+ * @depends_on_files NONE
+ * @used_by_files NONE
+ * @schema_refs SCH-UNSPECIFIED-000
+ * @event_refs EVT-UNSPECIFIED-000
+ * @api_refs API-UNSPECIFIED-000
+ * @flow_links flow:unspecified,ui:unspecified,event:unspecified
+ * @telemetry trace:unspecified;metric:unspecified;log:unspecified
+ * @dashboard_refs DASH-UNSPECIFIED
+ * @alert_policy_refs ALT-UNSPECIFIED
+ * @runbook_refs RB-UNSPECIFIED
+ * @rollout_refs RO-UNSPECIFIED
+ * @rollback_refs ROLLBACK-UNSPECIFIED
+ * @security_class internal
+ * @data_class technical_metadata
+ * @pii_flag no
+ * @auth_scope management_plane
+ * @compliance_scope internal-audit
+ * @retention_policy rp-persistent
+ * @owner_team hermes-platform-team
+ * @approver_role architect
+ * @human_author architect/lucadeg
+ * @agent_author codex
+ * @generated_by_model gpt-5.3-codex
+ * @prompt_hash sha256:auto-generated
+ * @compiler_version mvx-tvm-v5
+ * @source_artifacts AUTO-GENERATED
+ * @generated_at 2026-05-13T13:53:37.144Z
+ * @updated_at 2026-05-13T13:53:37.146Z
+ * @hash sha256:09b8fdc45e1a365932663deb66f5d3d039e3dab60862094f2d93638038829f8c
+ * @reviewers architect/lucadeg
+ * @last_verified_at 2026-05-13T13:53:37.144Z
+ * @review_state draft
+ * @admissibility candidate
+ * @impl_status_tmp_mock true
  */
 
 /** LLM responses are stable enough for a 7-day cache. */

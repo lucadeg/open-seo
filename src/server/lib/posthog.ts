@@ -2,8 +2,61 @@ import { env } from "cloudflare:workers";
 import { PostHog } from "posthog-node";
 import { isHostedServerAuthMode } from "@/server/lib/runtime-env";
 
-/** Returns a one-shot PostHog client, or null if the key is missing. Caller must shut down after use.
- *  A new instance per call is fine — this runs on Cloudflare Workers where construction cost is negligible. */
+/**
+ * @file_id FILE-MVX-AUTO-POSTHOG-001
+ * @artifact_kind implementation
+ * @project_id PRJ-HERMES-UNCHAINED
+ * @workspace_id WKS-MVX-ROOT
+ * @app_id APP-BACKEND
+ * @module_id MOD-IDE-WEB
+ * @component_id COMP-POSTHOG
+ * @bounded_context governance
+ * @epic_id EPI-MVX-00
+ * @capability_id CAP-UNSPECIFIED
+ * @story_id STORY-UNSPECIFIED
+ * @task_id TASK-UNSPECIFIED
+ * @sprint_id SPR-00
+ * @release_slice_id RS-UNSPECIFIED-00
+ * @requirement_refs REQ-MVX-000
+ * @acceptance_refs AC-UNSPECIFIED-000
+ * @test_refs TEST-UNSPECIFIED-000
+ * @contract_refs CNTR-UNSPECIFIED
+ * @evidence_refs EVD-UNSPECIFIED-000
+ * @depends_on_files NONE
+ * @used_by_files NONE
+ * @schema_refs SCH-UNSPECIFIED-000
+ * @event_refs EVT-UNSPECIFIED-000
+ * @api_refs API-UNSPECIFIED-000
+ * @flow_links flow:unspecified,ui:unspecified,event:unspecified
+ * @telemetry trace:unspecified;metric:unspecified;log:unspecified
+ * @dashboard_refs DASH-UNSPECIFIED
+ * @alert_policy_refs ALT-UNSPECIFIED
+ * @runbook_refs RB-UNSPECIFIED
+ * @rollout_refs RO-UNSPECIFIED
+ * @rollback_refs ROLLBACK-UNSPECIFIED
+ * @security_class internal
+ * @data_class technical_metadata
+ * @pii_flag no
+ * @auth_scope management_plane
+ * @compliance_scope internal-audit
+ * @retention_policy rp-persistent
+ * @owner_team hermes-platform-team
+ * @approver_role architect
+ * @human_author architect/lucadeg
+ * @agent_author codex
+ * @generated_by_model gpt-5.3-codex
+ * @prompt_hash sha256:auto-generated
+ * @compiler_version mvx-tvm-v5
+ * @source_artifacts AUTO-GENERATED
+ * @generated_at 2026-05-13T13:53:38.413Z
+ * @updated_at 2026-05-13T13:53:38.415Z
+ * @hash sha256:a06018908dc914296522fda32d2f5d2637012b0b21c4e25ba3e24633c41bd161
+ * @reviewers architect/lucadeg
+ * @last_verified_at 2026-05-13T13:53:38.413Z
+ * @review_state draft
+ * @admissibility candidate
+ * @impl_status_tmp_mock true
+ */
 function getServerPostHogClient(): PostHog | null {
   const apiKey = env.POSTHOG_PUBLIC_KEY?.trim();
   const host = env.POSTHOG_HOST?.trim();

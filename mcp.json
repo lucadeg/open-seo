@@ -1,0 +1,6 @@
+{
+  "name": "open-seo-mcp",
+  "command": "python",
+  "args": ["C:/Users/Deglu/.hermes/tools/open-seo/mcp_server.py"],
+  "env": {}
+}

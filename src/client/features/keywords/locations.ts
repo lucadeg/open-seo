@@ -1,15 +1,57 @@
 /**
- * DataForSEO-supported countries.
- *
- * Source: https://cdn.dataforseo.com/v3/locations/locations_and_languages_dataforseo_labs_2026_04_06.csv
- *
- * For countries with multiple Google-supported languages, we pick the
- * language with the largest keyword corpus (the primary search market)
- * as the default. DataForSEO Labs APIs accept a single location_code +
- * language_code pair per request, so we expose one entry per country.
- *
- * Entries are sorted alphabetically by country name; pick US as the
- * product-wide default via DEFAULT_LOCATION_CODE below.
+ * @file_id FILE-MVX-AUTO-LOCATIONS-001
+ * @artifact_kind implementation
+ * @project_id PRJ-HERMES-UNCHAINED
+ * @workspace_id WKS-MVX-ROOT
+ * @app_id APP-BACKEND
+ * @module_id MOD-IDE-WEB
+ * @component_id COMP-LOCATIONS
+ * @bounded_context governance
+ * @epic_id EPI-MVX-00
+ * @capability_id CAP-UNSPECIFIED
+ * @story_id STORY-UNSPECIFIED
+ * @task_id TASK-UNSPECIFIED
+ * @sprint_id SPR-00
+ * @release_slice_id RS-UNSPECIFIED-00
+ * @requirement_refs REQ-MVX-000
+ * @acceptance_refs AC-UNSPECIFIED-000
+ * @test_refs TEST-UNSPECIFIED-000
+ * @contract_refs CNTR-UNSPECIFIED
+ * @evidence_refs EVD-UNSPECIFIED-000
+ * @depends_on_files NONE
+ * @used_by_files NONE
+ * @schema_refs SCH-UNSPECIFIED-000
+ * @event_refs EVT-UNSPECIFIED-000
+ * @api_refs API-UNSPECIFIED-000
+ * @flow_links flow:unspecified,ui:unspecified,event:unspecified
+ * @telemetry trace:unspecified;metric:unspecified;log:unspecified
+ * @dashboard_refs DASH-UNSPECIFIED
+ * @alert_policy_refs ALT-UNSPECIFIED
+ * @runbook_refs RB-UNSPECIFIED
+ * @rollout_refs RO-UNSPECIFIED
+ * @rollback_refs ROLLBACK-UNSPECIFIED
+ * @security_class internal
+ * @data_class technical_metadata
+ * @pii_flag no
+ * @auth_scope management_plane
+ * @compliance_scope internal-audit
+ * @retention_policy rp-persistent
+ * @owner_team hermes-platform-team
+ * @approver_role architect
+ * @human_author architect/lucadeg
+ * @agent_author codex
+ * @generated_by_model gpt-5.3-codex
+ * @prompt_hash sha256:auto-generated
+ * @compiler_version mvx-tvm-v5
+ * @source_artifacts AUTO-GENERATED
+ * @generated_at 2026-05-13T13:53:35.067Z
+ * @updated_at 2026-05-13T13:53:35.069Z
+ * @hash sha256:dee4752ae9558af621b593a9cba314f6004e4b254c5bdb37bd34bc8543843dc3
+ * @reviewers architect/lucadeg
+ * @last_verified_at 2026-05-13T13:53:35.067Z
+ * @review_state draft
+ * @admissibility candidate
+ * @impl_status_tmp_mock true
  */
 export const DEFAULT_LOCATION_CODE = 2840;
 
