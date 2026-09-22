@@ -1,8 +1,8 @@
+
 name: Upload sourcemaps
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 concurrency:
   group: sourcemaps-${{ github.ref }}
   cancel-in-progress: true
